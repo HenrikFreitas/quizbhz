@@ -16,3 +16,12 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: senha
       MYSQL_DATABASE: banco_de_dados
+  backend:
+    container_name: backend
+    build:
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    expose:
+      - "3000"  
+    ports:
+      - "3000:3000"

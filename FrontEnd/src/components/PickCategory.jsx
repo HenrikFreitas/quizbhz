@@ -17,10 +17,10 @@ const PickCategory = () => {
 
   return (
     <div id="category">
-      <h2>Escolha uma categoria</h2>
-      <p></p>
+      <h2>Escolha o Nivel </h2>
+      <p>             </p>
       {quizState.questions.map((question) => (
-        <button
+        <button 
           onClick={() => chooseCategoryAndReorderQuestions(question.category)}
           key={question.category}
         >

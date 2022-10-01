@@ -5,6 +5,7 @@
   color: #fff;
 }
 
+
 body,
 html {
   min-height: 100vh;
@@ -36,4 +37,9 @@ button:hover {
     rgba(184, 84, 232, 1) 0%,
     rgba(132, 53, 222, 1) 100%
   );
+}
+@media screen and(max-width: 500px){
+  * {
+    display: block;
+  }
 }

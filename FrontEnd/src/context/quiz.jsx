@@ -1,3 +1,4 @@
+
 import { createContext, useReducer } from 'react';
 // import questions from '../data/questions_complete';
 import axios from 'axios';
@@ -5,7 +6,8 @@ import http from 'http';
 
 const STAGES = ['Start', 'Category', 'Playing', 'End'];
 const questions = async () => {
-  const result = await (await axios.get('http://52.90.7.101:3000/questions')).data;   //http://localhost:3000/questions' //http://52.90.7.101:3000/questions   // CONEXÃO COM O BANCO
+  const result = await (await axios.get('http://www.quiz.bhz.br:3000/questions')).data;   //http://localhost:3000/questions' //http://52.90.7.101:3000/questions   // CONEXÃO COM O BANCO
+
   const facil = result.filter((i) => {
     if (i.categoria === 'facil') return i;
   });
