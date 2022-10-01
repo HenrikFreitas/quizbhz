@@ -9,13 +9,13 @@ const questions = async () => {
   const result = await (await axios.get('http://www.quiz.bhz.br:3000/questions')).data;   //http://localhost:3000/questions' //http://52.90.7.101:3000/questions   // CONEXÃO COM O BANCO
 
   const facil = result.filter((i) => {
-    if (i.categoria === 'facil') return i;
+    if (i.categoria === 'Fácil') return i;
   });
   const dificil = result.filter((i) => {
-    if (i.categoria === 'dificil') return i;
+    if (i.categoria === 'Difícil') return i;
   });
   const medio = result.filter((i) => {
-    if (i.categoria === 'medio') return i;
+    if (i.categoria === 'Médio') return i;
   });
   return [
     {
